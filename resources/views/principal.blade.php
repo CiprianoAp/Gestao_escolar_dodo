@@ -42,7 +42,7 @@
 
             <!-- Content -->
             <div class="container mx-auto mt-4 bg-gray-200 select-none">
-                <div class="flex">
+                <div class="flex ml-0">
                     <!-- Sidebar -->
                     <div class="w-1/4 bg-gray-200 p-4">
                         <ul>
@@ -178,9 +178,9 @@
                 <div></div>
                 <div class="flex-grow">
                    <div class="flex justify-between">
-                        <h1 class="font-bold text-lg mb-5 text-gray-700">Adicionar disciplina ao curso</h1><button onclick="hideCadastrar_estudantes()" class=" rounded px-4 py-2  cursor-pointer mb-2 text-red-600">X</button>
+                        <h1 class="font-bold text-lg mb-5 text-gray-700">Cadastrar estudante</h1><button onclick="hideCadastrar_estudantes()" class=" rounded px-4 py-2  cursor-pointer mb-2 text-red-600">X</button>
                    </div>
-                    <form action="{{ route('disicipilna.curso') }}" class="space-y-3" method="GET">
+                    <form action="{{ route('cadastrar.estudantes') }}" class="space-y-3" method="GET">
                         @csrf
                         <input type="text" name="Nome" id="" placeholder="Nome" class="w-full p-2 border-blue-300 border-2">
                         <input type="text" name="Sobrenome" id="" placeholder="Local Sobrenome formação" class="w-full p-2 border-blue-300 border-2">
@@ -191,7 +191,7 @@
                         </select >
                         <select class="w-full p-2 border-blue-300 border-2"  name="cursos_id" id="">
                             @foreach ($cursos as $curso)
-                                <option  value="{{ $curso->id }}">{{ $curso->Curso }} Duração {{ $curso->Duracao }} anos</option>
+                                <option   value="{{ $curso->id }}">{{ $curso->Curso }} Duração {{ $curso->Duracao }} anos</option>
                             @endforeach
                         </select>
                         <div class="pb-5">

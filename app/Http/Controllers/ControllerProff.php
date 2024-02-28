@@ -7,6 +7,7 @@ use App\Models\professor;
 use App\Models\fomrcao_proff;
 use App\Models\disciplinas;
 use App\Models\Curso;
+use App\Models\Aluno;
 use App\Models\Disciplina_curso;
 use App\Models\Prof_disciplina;
 use Illuminate\Support\Facades\DB;
@@ -108,5 +109,23 @@ class ControllerProff extends Controller
         }
 
         dd($request->all());
+    }
+
+
+    //Cadastrar estudante
+    public function cadstrar_estudante(Request $request){
+
+        $dados = $request->validate([
+            'cursos_id' => 'required',
+            'Nome' => 'required',
+            'Sobrenome' => 'required',
+            'Data' => 'required',
+            'Genero' => 'required',
+        ]);
+
+       if( Aluno::create($dados))
+       {
+            dd("Cadastrado com sucesso");
+       }
     }
 }

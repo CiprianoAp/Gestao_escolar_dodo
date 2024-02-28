@@ -50,7 +50,7 @@
                             <li class="mb-2"><button onclick="showFormProf()" class="text-blue-500">Adicionar formação ao professor</button></li>
                             <li class="mb-2"><button onclick="showDisicpilnaAocurso()" class="text-blue-500">Adicionar disiciplina ao curso</button></li>
                             <li class="mb-2"><button onclick="showCadastrar_estudantes()" class="text-blue-500">Cadastrar Estudante</button></li>
-                            <li class="mb-2"><a href="#" class="text-blue-500">Adicionar curso ao estudante</a></li>
+                            <li class="mb-2"><a href="#" class="text-blue-500">Inscrever ou matricular o estudante</a></li>
                             <li class="mb-2"><a href="#" class="text-blue-500">Cadastrar Curso</a></li>
                             <li class="mb-2"><a href="#" class="text-blue-500">Turma</a></li>
                             <li class="mb-2"><a href="#" class="text-blue-500">Consultas</a></li>
@@ -185,15 +185,13 @@
                         <input type="text" name="Nome" id="" placeholder="Nome" class="w-full p-2 border-blue-300 border-2">
                         <input type="text" name="Sobrenome" id="" placeholder="Local Sobrenome formação" class="w-full p-2 border-blue-300 border-2">
                         <input type="date" name="Data" id="" placeholder="Data de nascimento" class="w-full p-2 border-blue-300 border-2">
+                        <input type="text" name="Telefone" id="" placeholder="Telefone" class="w-full p-2 border-blue-300 border-2">
+                        <input type="text" name="Tel_encarregado" id="" placeholder="Tel_encarregado" class="w-full p-2 border-blue-300 border-2">
                         <select class="w-full p-2 border-blue-300 border-2"  name="Genero" id="">
                                 <option  value="M">M</option>
                                 <option  value="F">F</option>
                         </select >
-                        <select class="w-full p-2 border-blue-300 border-2"  name="cursos_id" id="">
-                            @foreach ($cursos as $curso)
-                                <option   value="{{ $curso->id }}">{{ $curso->Curso }} Duração {{ $curso->Duracao }} anos</option>
-                            @endforeach
-                        </select>
+
                         <div class="pb-5">
                             <button class="w-full bg-blue-300 rounded px-4 py-2 text-white cursor-pointer hover:bg-blue-500">Adicionar</button>
                        </div>

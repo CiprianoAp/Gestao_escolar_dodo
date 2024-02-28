@@ -10,11 +10,12 @@ class Aluno extends Model
     use HasFactory;
     protected $fillable = [
 
-        'cursos_id',
         'Nome',
         'Sobrenome',
         'Data' ,
         'Genero',
+        'Telefone',
+        'Tel_encarregado',
 
     ];
 }

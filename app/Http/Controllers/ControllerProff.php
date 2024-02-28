@@ -116,11 +116,12 @@ class ControllerProff extends Controller
     public function cadstrar_estudante(Request $request){
 
         $dados = $request->validate([
-            'cursos_id' => 'required',
             'Nome' => 'required',
             'Sobrenome' => 'required',
             'Data' => 'required',
             'Genero' => 'required',
+            'Telefone' => 'required',
+            'Tel_encarregado' => 'required',
         ]);
 
        if( Aluno::create($dados))

@@ -29,8 +29,6 @@ return new class extends Migration
             ->constrained()
             ->onUpdate('cascade')
             ->onDelete('cascade');
-            $table->string('Telefone');
-            $table->string('Encarregado');
             $table->timestamps();
         });
     }

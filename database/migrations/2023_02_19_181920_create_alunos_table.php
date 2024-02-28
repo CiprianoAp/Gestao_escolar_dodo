@@ -13,14 +13,12 @@ return new class extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('cursos_id')
-            ->constrained()
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
             $table->string('Nome');
             $table->string('Sobrenome');
             $table->date('Data');
             $table->enum('Genero',['M',['F']]);
+            $table->string('Telefone')->unique();
+            $table->string('Tel_encarregado')->unique();
             $table->timestamps();
         });
     }

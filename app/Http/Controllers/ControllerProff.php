@@ -7,7 +7,10 @@ use App\Models\professor;
 use App\Models\fomrcao_proff;
 use App\Models\disciplinas;
 use App\Models\Curso;
+use App\Models\Ano_letivo;
+use App\Models\Turma;
 use App\Models\Aluno;
+use App\Models\Inscricoes;
 use App\Models\Disciplina_curso;
 use App\Models\Prof_disciplina;
 use Illuminate\Support\Facades\DB;
@@ -18,7 +21,7 @@ class ControllerProff extends Controller
     //Pagina inicial para Admin
     public function login(){
 
-        return view('login');
+        return view('Admin.login');
     }
 
 
@@ -31,10 +34,10 @@ class ControllerProff extends Controller
             ->first();
         if ($dados) {
 
-           if( ($dados_prof = $professor::all()) && ($Disciplinas = disciplinas::all()) && ($cursos = Curso::all()))
+           if( (($aluno = Aluno::all()) && ($turma = Turma::all())  && ($ano_letivo = Ano_letivo::all()) && $dados_prof = $professor::all()) && ($Disciplinas = disciplinas::all()) && ($cursos = Curso::all()))
            {
             //dd($cursos->all());
-                return view('principal',compact('dados','dados_prof','Disciplinas','cursos'));
+                return view('Admin.principal',compact('dados','dados_prof','Disciplinas','cursos','turma','ano_letivo' ,'aluno'));
            }
 
 
@@ -128,5 +131,22 @@ class ControllerProff extends Controller
        {
             dd("Cadastrado com sucesso");
        }
+    }
+
+    public function inscrever_estudante(Request $request)
+    {
+        //dd($request->all());
+
+        $dados = $request->validate([
+            'alunos_id' => 'required',
+            'ano_letivos_id' => 'required',
+            'cursos_id' => 'required',
+            'turmas_id' => 'required',
+        ]);
+
+        if(Inscricoes::create($dados)){
+            dd('Cadastrado com sucesso');
+        }
+
     }
 }

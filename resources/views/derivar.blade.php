@@ -16,5 +16,6 @@
   <script src="../js/cadstrar_prof.js"></script>
   <script src="../js/add_disciplina_curso.js"></script>
   <script src="../js/Cadastrar_estudantes.js"></script>
+  <script src="../js/inscrever_estudante.js"></script>
 </body>
 </html>

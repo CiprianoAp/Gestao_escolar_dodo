@@ -47,10 +47,10 @@
                     <div class="w-1/4 bg-gray-200 p-4">
                         <ul>
                             <li class="mb-2"><button  onclick="showCadastrar()"  class="text-blue-500">cadastrar professor</button></li>
-                            <li class="mb-2"><button onclick="showFormProf()" class="text-blue-500">Adicionar formação ao professor</button></li>
-                            <li class="mb-2"><button onclick="showDisicpilnaAocurso()" class="text-blue-500">Adicionar disiciplina ao curso</button></li>
+                            <li class="mb-2"><button onclick="showFormProf()" class="text-blue-500">Add formação ao professor</button></li>
+                            <li class="mb-2"><button onclick="showDisicpilnaAocurso()" class="text-blue-500">Add disiciplina ao curso</button></li>
                             <li class="mb-2"><button onclick="showCadastrar_estudantes()" class="text-blue-500">Cadastrar Estudante</button></li>
-                            <li class="mb-2"><a href="#" class="text-blue-500">Inscrever ou matricular o estudante</a></li>
+                            <li class="mb-2"><a onclick="showinscrever_estudante()" class="text-blue-500">Inscrever ou matricular o estudante</a></li>
                             <li class="mb-2"><a href="#" class="text-blue-500">Cadastrar Curso</a></li>
                             <li class="mb-2"><a href="#" class="text-blue-500">Turma</a></li>
                             <li class="mb-2"><a href="#" class="text-blue-500">Consultas</a></li>
@@ -194,6 +194,52 @@
 
                         <div class="pb-5">
                             <button class="w-full bg-blue-300 rounded px-4 py-2 text-white cursor-pointer hover:bg-blue-500">Adicionar</button>
+                       </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <!--Inscrever estudantes -->
+    <div>
+        <div id="inscrever_estudante" class="fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen  justify-center items-center opacity-0 hidden transition-opacity duration-500">
+            <div class="bg-white rounded shadown-md p-8 w-[50%]  gap-5 pb-0 overflow-hidden">
+                <div></div>
+                <div class="flex-grow">
+                   <div class="flex justify-between">
+                        <h1 class="font-bold text-lg mb-5 text-gray-700">Inscrever estudante</h1><button onclick="hideinscrever_estudante()" class=" rounded px-4 py-2  cursor-pointer mb-2 text-red-600">X</button>
+                   </div>
+                    <form action="{{ route('inscrever.estudante') }}" class="space-y-3" method="GET">
+                        @csrf
+
+                        <select class="w-full p-2 border-blue-300 border-2"  name="alunos_id" id="">
+                            @foreach ($aluno as $alunos)
+                                <option  value="{{ $alunos->id }}"> <span class="text-red-700"> Aluno: </span> {{ $alunos->Nome }} <span class="text-red-700"> Nº: </span> {{ $alunos->id }}</option>
+                            @endforeach
+                        </select >
+
+
+                        <select class="w-full p-2 border-blue-300 border-2"  name="ano_letivos_id" id="">
+                            @foreach ($ano_letivo as $ano_letivos)
+                                <option  value="{{ $ano_letivos->id }}"> <span> Ano letivo: </span> {{ $ano_letivos->Ano_letivo }}</option>
+                            @endforeach
+                        </select >
+
+
+                        <select class="w-full p-2 border-blue-300 border-2"  name="cursos_id" id="">
+                            @foreach ($cursos as $curso)
+                                <option  value="{{ $curso->id }}"> <span> Curso: </span> {{ $curso->Curso }}</option>
+                            @endforeach
+                        </select >
+
+                        <select class="w-full p-2 border-blue-300 border-2"  name="turmas_id" id="">
+                            @foreach ($turma as $turmas)
+                                <option  value="{{ $turmas->id }}"> <span> Turma: </span> {{ $turmas->Turma }} <span> Periodo: </span> {{ $turmas->Periodo }}</option>
+                            @endforeach
+                        </select >
+
+
+                        <div class="pb-5">
+                            <button class="w-full bg-blue-300 rounded px-4 py-2 text-white cursor-pointer hover:bg-blue-500">Inscrever</button>
                        </div>
                     </form>
                 </div>

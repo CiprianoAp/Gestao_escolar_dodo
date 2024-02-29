@@ -27,3 +27,5 @@ Route::get('cadastrar/formacao_prof',[ControllerProff::class, 'formacao_p'])->na
 Route::get('cadastrar/disicipilna_curso',[ControllerProff::class, 'disicipilna_curso'])->name('disicipilna.curso');
 
 Route::get('cadastrar/estudante',[ControllerProff::class, 'cadstrar_estudante'])->name('cadastrar.estudantes');
+
+Route::get('inscrever/estudante',[ControllerProff::class, 'inscrever_estudante'])->name('inscrever.estudante');

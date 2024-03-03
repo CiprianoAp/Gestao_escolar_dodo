@@ -46,14 +46,15 @@
                     <!-- Sidebar -->
                     <div class="w-1/4 bg-gray-200 p-4">
                         <ul>
-                            <li class="mb-2"><button  onclick="showCadastrar()"  class="text-blue-500">cadastrar professor</button></li>
-                            <li class="mb-2"><button onclick="showFormProf()" class="text-blue-500">Add formação ao professor</button></li>
-                            <li class="mb-2"><button onclick="showDisicpilnaAocurso()" class="text-blue-500">Add disiciplina ao curso</button></li>
-                            <li class="mb-2"><button onclick="showCadastrar_estudantes()" class="text-blue-500">Cadastrar Estudante</button></li>
-                            <li class="mb-2"><a onclick="showinscrever_estudante()" class="text-blue-500">Inscrever ou matricular o estudante</a></li>
-                            <li class="mb-2"><a href="#" class="text-blue-500">Cadastrar Curso</a></li>
-                            <li class="mb-2"><a href="#" class="text-blue-500">Turma</a></li>
-                            <li class="mb-2"><a href="#" class="text-blue-500">Consultas</a></li>
+                            <li class="mb-2"><button  onclick="showCadastrar()"  class="text-blue-500 hover:text-blue-800">cadastrar professor</button></li>
+                            <li class="mb-2"><button onclick="showFormProf()" class="text-blue-500 hover:text-blue-800">Add formação ao professor</button></li>
+                            <li class="mb-2"><button onclick="showDisicpilnaAocurso()" class="text-blue-500 hover:text-blue-800">Add disiciplina ao curso</button></li>
+                            <li class="mb-2"><button onclick="showCadastrar_estudantes()" class="text-blue-500 hover:text-blue-800">Cadastrar Estudante</button></li>
+                            <li class="mb-2"><a onclick="showinscrever_estudante()" class="text-blue-500 hover:text-blue-800">Inscrever ou matricular o estudante</a></li>
+                            <li class="mb-2"><a href="{{ route('ver.disciplina') }}" class="text-blue-500 hover:text-blue-800">Cadastrar Disciplina</a></li>
+                            <li class="mb-2"><a href="{{ route('ver.turma') }}" class="text-blue-500 hover:text-blue-800">Cadastrar Turma</a></li>
+                            <li class="mb-2"><a href="#" class="text-blue-500 hover:text-blue-800">Cadastrar Curso</a></li>
+                            <li class="mb-2"><a href="#" class="text-blue-500 hover:text-blue-800">Cadastrar Admin</a></li>
                         </ul>
                     </div>
 

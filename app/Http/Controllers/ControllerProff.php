@@ -149,4 +149,48 @@ class ControllerProff extends Controller
         }
 
     }
+
+    //Cadastrar disciplina
+
+    public function cadastrar_disciplina(Request $request)
+    {
+
+        $dados = $request->validate([
+            'Disciplina' => 'required',
+
+        ]);
+
+        if(disciplinas::create($dados))
+        {
+            dd("Cadastrado com sucesso");
+        }
+        dd($request->all());
+    }
+
+    //Ver disciplina
+
+    public function disciplina()
+    {
+        return view('Admin.pags_cadastrar.cadastrar_disiciplina');
+    }
+
+    public function turma(Request $request)
+    {
+        $turma = Turma::all();
+       return view('Admin.pags_cadastrar.cadastrar_turma',compact('turma'));
+    }
+
+    public function turma_cadastrar(Request $request)
+    {
+        $dados = $request->validate([
+            'Turma' => 'required',
+            'Periodo' => 'required',
+
+        ]);
+
+        if(turma::create($dados))
+        {
+            dd("Cadastrado com sucesso");
+        }
+    }
 }

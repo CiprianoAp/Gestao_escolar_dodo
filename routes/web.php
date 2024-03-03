@@ -29,3 +29,11 @@ Route::get('cadastrar/disicipilna_curso',[ControllerProff::class, 'disicipilna_c
 Route::get('cadastrar/estudante',[ControllerProff::class, 'cadstrar_estudante'])->name('cadastrar.estudantes');
 
 Route::get('inscrever/estudante',[ControllerProff::class, 'inscrever_estudante'])->name('inscrever.estudante');
+
+Route::get('cadastrar/disciplina',[ControllerProff::class, 'cadastrar_disciplina'])->name('cadastrar.disciplina');
+
+Route::get('ver/disciplina',[ControllerProff::class, 'disciplina'])->name('ver.disciplina');
+
+Route::get('ver/turma',[ControllerProff::class, 'turma'])->name('ver.turma');
+
+Route::get('cadastrar/turma',[ControllerProff::class, 'turma_cadastrar'])->name('cadastrar.turma');

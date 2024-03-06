@@ -44,16 +44,16 @@
             <div class="container mx-auto mt-4 bg-gray-200 select-none">
                 <div class="flex ml-0">
                     <!-- Sidebar -->
-                    <div class="w-1/4 bg-gray-200 p-4">
+                    <div class=" bg-gray-200 p-4">
                         <ul>
-                            <li class="mb-2"><button  onclick="showCadastrar()"  class="text-blue-500 hover:text-blue-800">cadastrar professor</button></li>
-                            <li class="mb-2"><button onclick="showFormProf()" class="text-blue-500 hover:text-blue-800">Add formação ao professor</button></li>
-                            <li class="mb-2"><button onclick="showDisicpilnaAocurso()" class="text-blue-500 hover:text-blue-800">Add disiciplina ao curso</button></li>
-                            <li class="mb-2"><button onclick="showCadastrar_estudantes()" class="text-blue-500 hover:text-blue-800">Cadastrar Estudante</button></li>
-                            <li class="mb-2"><a onclick="showinscrever_estudante()" class="text-blue-500 hover:text-blue-800">Inscrever ou matricular o estudante</a></li>
-                            <li class="mb-2"><a href="{{ route('ver.disciplina') }}" class="text-blue-500 hover:text-blue-800">Cadastrar Disciplina</a></li>
-                            <li class="mb-2"><a href="{{ route('ver.turma') }}" class="text-blue-500 hover:text-blue-800">Cadastrar Turma</a></li>
-                            <li class="mb-2"><a href="#" class="text-blue-500 hover:text-blue-800">Cadastrar Curso</a></li>
+                            <li class="mb-2"><button  onclick="showCadastrar()"  class="text-blue-500 hover:text-blue-800"><i class="mr-5 text-gray-800 fa-solid fa-user"></i>cadastrar professor</button></li>
+                            <li class="mb-2"><button onclick="showFormProf()" class="text-blue-500 hover:text-blue-800"><i class="text-gray-800 fa-solid fa-chalkboard-user mr-5"></i>Add formação ao professor</button></li>
+                            <li class="mb-2"><button onclick="showDisicpilnaAocurso()" class="text-blue-500 hover:text-blue-800"><i class="mr-5 text-gray-800 fa-solid fa-book"></i>Add disiciplina ao curso</button></li>
+                            <li class="mb-2"><button onclick="showCadastrar_estudantes()" class="text-blue-500 hover:text-blue-800"><i class="mr-5 text-gray-800 fa-solid fa-user"></i>Cadastrar Estudante</button></li>
+                            <li class="mb-2"><a onclick="showinscrever_estudante()" class="text-blue-500 hover:text-blue-800"><i class="mr-5 text-gray-800 fa-solid fa-users"></i>Inscrever ou matricular o estudante</a></li>
+                            <li class="mb-2"><a href="{{ route('ver.disciplina') }}" class="text-blue-500 hover:text-blue-800"><i class="mr-5 text-gray-800 fa-solid fa-address-book"></i>Cadastrar Disciplina</a></li>
+                            <li class="mb-2"><a href="{{ route('ver.turma') }}" class="text-blue-500 hover:text-blue-800"><i class="mr-5 text-gray-800 fa-solid fa-landmark"></i>Cadastrar Turma</a></li>
+                            <li class="mb-2"><a href="{{ route('ver.curso') }}" class="text-blue-500 hover:text-blue-800"><i class="text-gray-800 fa-solid fa-chalkboard-user mr-5"></i>Cadastrar Curso</a></li>
                             <li class="mb-2"><a href="#" class="text-blue-500 hover:text-blue-800">Cadastrar Admin</a></li>
                         </ul>
                     </div>

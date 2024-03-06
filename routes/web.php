@@ -37,3 +37,7 @@ Route::get('ver/disciplina',[ControllerProff::class, 'disciplina'])->name('ver.d
 Route::get('ver/turma',[ControllerProff::class, 'turma'])->name('ver.turma');
 
 Route::get('cadastrar/turma',[ControllerProff::class, 'turma_cadastrar'])->name('cadastrar.turma');
+
+Route::get('ver/curso',[ControllerProff::class, 'ver_curso'])->name('ver.curso');
+
+Route::get('cadastrar/curso',[ControllerProff::class, 'cadastrar_curso'])->name('cadastrar.curso');

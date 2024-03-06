@@ -193,4 +193,25 @@ class ControllerProff extends Controller
             dd("Cadastrado com sucesso");
         }
     }
+
+    public function ver_curso()
+    {
+        return view('Admin.pags_cadastrar.cadastrar_curso');
+    }
+
+    public function cadastrar_curso(Request $request)
+    {
+
+        $dados = $request->validate([
+            'Curso' => 'required',
+            'Duracao' => 'required',
+
+        ]);
+
+        if(Curso::create($dados)){
+
+            dd("Cadstrado com sucesso");
+        }
+        dd($request->all());
+    }
 }
